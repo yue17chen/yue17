@@ -14,8 +14,7 @@
     <script type="text/html" id="tpl_home">
 <div class="page">
     <div class="hd">
-        <h1 class="page_title">UI</h1>
-        <p class="page_desc">设计</p>
+        <h3 class="page_title">约一起</h3>
     </div>
     <div class="bd">
         <div class="weui_grids">
@@ -880,36 +879,37 @@
 <script id="page_groupon" src="page_groupon.js">
 <div class="page">
     <div class="hd">
-        <h2 class="page_title">GroupOn</h2>
+        <p class="page_title">GroupOn</p>
     </div>
     <div class="weui_cells weui_cells_form">
         <div class="weui_cell">
             <div class="weui_cell_hd"><label class="weui_label">主题:</label></div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" placeholder="[请输入活动主题]"/>
+                <input class="weui_input" placeholder="请输入活动主题"/>
             </div>
-        </div>       
-    </div>
-    <div class="weui_cells_title">活动详述:</div>
-    <div class="weui_cells weui_cells_form">
+        </div> 
+        <div class="weui_cell">
+            <div class="weui_cell_hd">活动详述:</div>
+        </div>
         <div class="weui_cell">
             <div class="weui_cell_bd weui_cell_primary">
-                <textarea class="weui_textarea" placeholder="[请输入活动详述]" rows="3"></textarea>
+                <textarea class="weui_textarea" placeholder="请输入活动详述" rows="3"></textarea>
                 <div class="weui_textarea_counter"><span>0</span>/200</div>
             </div>
-        </div>
-    </div> 
+        </div>      
+    </div>
+    
     <div class="weui_cells weui_cells_form">
         <div class="weui_cell">
             <div class="weui_cell_hd">最大人数</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="[0不限制]"></input>
+                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="0不限制"></input>
             </div>
         </div>
         <div class="weui_cell">
             <div class="weui_cell_hd">截止时间:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" type="datetime-local" value="" placeholder=""/>
+                <input class="weui_input" type="date-local" value="" placeholder=""/>
             </div>
         </div> 
         <div class="weui_cell weui_cell_switch">
@@ -935,7 +935,7 @@
         <div class="weui_cell">
             <div class="weui_cell_hd">姓名:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" readonly="readonly" placeholder="[用户需要填写姓名]"/>
+                <input class="weui_input" readonly="readonly" placeholder="用户需要填写姓名"/>
             </div>
             <div class="weui_cell_ft">
                 <i class="weui_icon_cancel"></i>
@@ -944,7 +944,7 @@
         <div class="weui_cell">
             <div class="weui_cell_hd">地址:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" readonly="readonly" placeholder="[用户需要填写地址]"/>
+                <input class="weui_input" readonly="readonly" placeholder="活动参加者需要填写地址"/>
             </div>
             <div class="weui_cell_ft">
                 <i class="weui_icon_cancel"></i>
@@ -953,7 +953,7 @@
         <div class="weui_cell">
             <div class="weui_cell_hd">电话:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" readonly="readonly" placeholder="[用户需要填写电话]"/>
+                <input class="weui_input" readonly="readonly" placeholder="活动参加者需要填写电话"/>
             </div>
             <div class="weui_cell_ft">
                 <i class="weui_icon_cancel"></i>
@@ -964,13 +964,13 @@
         <div class="weui_cell">
             <div class="weui_cell_hd">商品名称:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" placeholder="[请填写商品名称]"/>
+                <input class="weui_input" placeholder="请填写商品名称"/>
             </div>
         </div>
         <div class="weui_cell">
             <div class="weui_cell_hd">商品价格:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="[请填写商品对应价格]"/>
+                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请填写商品对应价格"/>
             </div>
         </div>
     </div> 
