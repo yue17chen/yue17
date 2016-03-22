@@ -14,7 +14,7 @@
     <script type="text/html" id="tpl_home">
 <div class="page">
     <div class="hd">
-        <h3 class="page_title">约一起</h3>
+        <h3 class="page_title">UI</h3>
     </div>
     <div class="bd">
         <div class="weui_grids">
@@ -876,10 +876,10 @@
 </div>
 </script>
 
-<script id="page_groupon" src="page_groupon.js">
-<div class="page">
+<script type="text/html" id="page_groupon">
+<div class="page button">
     <div class="hd">
-        <p class="page_title">GroupOn</p>
+        <h1 class="page_title">GroupOn</h1>
     </div>
     <div class="weui_cells weui_cells_form">
         <div class="weui_cell">
@@ -887,7 +887,7 @@
             <div class="weui_cell_bd weui_cell_primary">
                 <input class="weui_input" placeholder="请输入活动主题"/>
             </div>
-        </div> 
+        </div>       
         <div class="weui_cell">
             <div class="weui_cell_hd">活动详述:</div>
         </div>
@@ -896,24 +896,24 @@
                 <textarea class="weui_textarea" placeholder="请输入活动详述" rows="3"></textarea>
                 <div class="weui_textarea_counter"><span>0</span>/200</div>
             </div>
-        </div>      
-    </div>
+        </div>
+    </div> 
     
     <div class="weui_cells weui_cells_form">
         <div class="weui_cell">
             <div class="weui_cell_hd">最大人数:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="0标示不限制"></input>
+                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="0表示不限制"></input>
             </div>
         </div>
         <div class="weui_cell">
             <div class="weui_cell_hd">截止时间:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" type="datetime-local" value="" placeholder="点击此处填写时间"></input>
+                <input class="weui_input" type="datetime-local" value="" placeholder=""></input>
             </div>
         </div> 
         <div class="weui_cell weui_cell_switch">
-            <div class="weui_cell_hd weui_cell_primary">全网公开:</div>
+            <div class="weui_cell_hd weui_cell_primary">全网公开</div>
             <div class="weui_cell_ft">
                 <input class="weui_switch" type="checkbox"/>
             </div>
@@ -921,13 +921,14 @@
     </div>
     <div class="bd spacing">
         <div class="button_sp_area">
-            <a href="javascript:;" class="weui_btn weui_btn_plain_primary" id="page_groupon_next">下一步</a>
+            <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_plain_primary" id="page_groupon_prev">上一步</a>
+            <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_plain_primary" id="page_groupon_next">下一步</a>
         </div>
     </div>
 </div>
 </script>
 <script type="text/html" id="page_groupon_excel">
-<div class="page">
+<div class="page button">
     <div class="hd">
         <h2 class="page_title">excel</h2>
     </div>
@@ -935,7 +936,7 @@
         <div class="weui_cell">
             <div class="weui_cell_hd">姓名:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" readonly="readonly" placeholder="用户需要填写姓名"/>
+                <input class="weui_input" readonly="readonly" placeholder="活动参加者需要填写姓名"/>
             </div>
             <div class="weui_cell_ft">
                 <i class="weui_icon_cancel"></i>
@@ -962,22 +963,130 @@
     </div> 
     <div class="weui_cells weui_cells_form">
         <div class="weui_cell">
-            <div class="weui_cell_hd">商品名称:</div>
+            <div class="weui_cell_hd">宝贝名称:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" placeholder="请填写商品名称"/>
+                <input class="weui_input" placeholder="请填写宝贝名称"/>
             </div>
         </div>
         <div class="weui_cell">
-            <div class="weui_cell_hd">商品价格:</div>
+            <div class="weui_cell_hd">宝贝价格:</div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请填写商品对应价格"/>
+                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="0"/>
             </div>
         </div>
-    </div> 
+    </div>
+    <div class="bd spacing">
+        <div class="button_sp_area">
+            <a href="javascript:;" class="weui_btn weui_btn_plain_primary" id="page_groupon_excel_new">添加宝贝</a>
+            <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_plain_primary" id="page_groupon_excel_prev">上一步</a>
+            <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_plain_primary" id="page_groupon_excel_next">下一步</a>
+        </div>
+    </div>     
 </div>
 </script>
 
-<script src="./zepto.min.js"></script> 
+<script type="text/html" id="page_groupon_release">
+<div class="page">
+    <div class="hd">
+        <h1 class="page_title">release</h1>
+    </div>
+    <div class="bd">
+        <div class="weui_cells_title">分享到</div> 
+        <div class="weui_grids">
+            <a href="javascript:;" class="weui_grid js_grid">
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_button.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    Friend
+                </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid" >
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_cell.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    WX
+                </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid" >
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_toast.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    QQ
+                </p>
+            </a>
+        </div>
+        <div class="weui_cells_title">打赏程序媛/程序猿/攻城狮</div>     
+        <div class="weui_grids">
+            <a href="javascript:;" class="weui_grid js_grid" >
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_dialog.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    1
+                </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid" >
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_progress.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    2
+                </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid">
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_msg.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    5
+                </p>
+            </a>
+        </div>
+        <div class="weui_cells_title">土豪请戳下面</div>          
+        <div class="weui_grids">
+            <a href="javascript:;" class="weui_grid js_grid">
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_article.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    10
+                </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid">
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_actionSheet.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    20
+                </p>
+            </a>
+            <a href="javascript:;" class="weui_grid js_grid">
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_icons.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    50
+                </p>
+            </a>            
+
+            <a href="javascript:;" class="weui_grid js_grid" >
+                <div class="weui_grid_icon">
+                    <img src="./images/icon_nav_dialog.png" alt="">
+                </div>
+                <p class="weui_grid_label">
+                    100
+                </p>
+            </a>
+        </div>        
+    </div>
+</div>
+</script>
+
+<script src="./zepto.min.js"></script>
+<script src="./page_groupon.js"></script> 
 <script src="./page_manager.js"></script>
 
 </body>
