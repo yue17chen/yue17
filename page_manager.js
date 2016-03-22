@@ -404,6 +404,7 @@ $(function () {
         .push(searchbar)
         .push(page_groupon)
         .push(page_groupon_excel)
+        .push(page_groupon_release)
         .setDefault('home')
         .init();
 });
