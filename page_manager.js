@@ -50,7 +50,7 @@ var pageManager = {
      _go: function (page) {
          this._pageIndex ++;
 
-         history.replaceState && history.replaceState({_pageIndex: this._pageIndex}, '', location.href);
+//         history.replaceState && history.replaceState({_pageIndex: this._pageIndex}, '', location.href);
 
          var html = $(page.html).html();
          var $html = $(html).addClass('slideIn').addClass(page.name);
@@ -386,7 +386,24 @@ $(function () {
         template: '#tpl_icons',
         events: {}
     };
-
+    /*add by chenxu*/
+    var groupon_my_demo = {
+        name: 'groupon_my_demo',
+        url: '#groupon_my_demo',
+        html: '#tpl_groupon_my_demo',
+        events: {
+            '#page_groupon_chenxu_prev': {
+                click: function (e) {
+                    pageManager.back();
+                }
+            },
+            '#page_groupon_chenxu_home': {
+                click: function (e) {
+                    pageManager.go("home");
+                }
+            }
+        }
+    };
     pageManager.push(home)
         .push(button)
         .push(cell)
@@ -405,6 +422,8 @@ $(function () {
         .push(page_groupon)
         .push(page_groupon_excel)
         .push(page_groupon_release)
+        /*add by chenxu*/
+        .push(groupon_my_demo)
         .setDefault('home')
         .init();
 });
